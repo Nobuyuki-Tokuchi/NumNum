@@ -1,8 +1,7 @@
 {
   "profiles": {
     "NumNum": {
-      "commandName": "Project",
-      "commandLineArgs": "a.num"
+      "commandName": "Project"
     }
   }
 }

@@ -235,6 +235,9 @@ namespace NumNum.Translator
                     case NumOperator.END_WHILE:
                         EndWhile();
                         break;
+                    case NumOperator.BREAK:
+                        Break();
+                        break;
                     case NumOperator.CONSTANT_8_BIT:
                         Constant8Bit(token.Value);
                         break;
@@ -309,6 +312,7 @@ namespace NumNum.Translator
         protected abstract void EndIf();
         protected abstract void WhileNotZero();
         protected abstract void EndWhile();
+        protected abstract void Break();
         protected abstract void Constant8Bit(uint value);
         protected abstract void Constant16Bit(uint value);
         protected abstract void Constant32Bit(uint value);

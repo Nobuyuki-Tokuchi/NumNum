@@ -18,7 +18,7 @@ namespace NumNum
             {
                 if (args.Length > 0)
                 {
-                    var showTokens = Array.IndexOf(args, SHOW_TOKENS) != -1;
+                    bool showTokens = Array.IndexOf(args, SHOW_TOKENS) != -1;
                     var outFileOptionIndex = Array.IndexOf(args, OUT_FILE);
                     NumTranslator numnum;
 
@@ -43,11 +43,13 @@ namespace NumNum
                             using (var stream = File.Create(output))
                             {
                                 numnum.OutputStream = stream;
+                                numnum.ShowTokens = showTokens;
                                 numnum.Compile(fileName);
                             }
                         }
                         else
                         {
+                            numnum.ShowTokens = showTokens;
                             numnum.Compile(fileName);
                         }
                     }
@@ -69,6 +71,7 @@ namespace NumNum
                             using (var stream = File.Create(args.ElementAt(outFileIndex)))
                             {
                                 numnum.OutputStream = stream;
+                                numnum.ShowTokens = showTokens;
                                 numnum.Compile(fileName);
                             }
                         }

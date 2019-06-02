@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace NumNum.Translator
@@ -41,7 +42,7 @@ namespace NumNum.Translator
                     case NumOperator.POP:
                         if(this.stack.Count < 1)
                         {
-                            throw new ApplicationException("empty stack");
+                            throw new ApplicationException($"empty stack: {op.Operator}");
                         }
                         else
                         {
@@ -55,13 +56,13 @@ namespace NumNum.Translator
                         }
                         else
                         {
-                            throw new ApplicationException("empty stack");
+                            throw new ApplicationException($"empty stack: {op.Operator}");
                         }
                         break;
                     case NumOperator.SWAP:
                         if(this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else {
                             uint top = this.stack.Pop();
@@ -74,7 +75,7 @@ namespace NumNum.Translator
                     case NumOperator.OVER:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else {
                             uint top = this.stack.Pop();
@@ -87,7 +88,7 @@ namespace NumNum.Translator
                     case NumOperator.INCREMENT:
                         if (this.stack.Count < 1)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -99,7 +100,7 @@ namespace NumNum.Translator
                     case NumOperator.DECREMENT:
                         if (this.stack.Count < 1)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -111,7 +112,7 @@ namespace NumNum.Translator
                     case NumOperator.NOT:
                         if (this.stack.Count < 1)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -123,7 +124,7 @@ namespace NumNum.Translator
                     case NumOperator.ROTATE_DOWN:
                         if (this.stack.Count < 3)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -139,7 +140,7 @@ namespace NumNum.Translator
                     case NumOperator.ROTATE_UP:
                         if (this.stack.Count < 3)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -155,7 +156,7 @@ namespace NumNum.Translator
                     case NumOperator.AND:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -168,7 +169,7 @@ namespace NumNum.Translator
                     case NumOperator.OR:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -181,7 +182,7 @@ namespace NumNum.Translator
                     case NumOperator.XOR:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -194,7 +195,7 @@ namespace NumNum.Translator
                     case NumOperator.SHIFT_RIGHT:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -207,7 +208,7 @@ namespace NumNum.Translator
                     case NumOperator.SHIFT_LEFT:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -220,7 +221,7 @@ namespace NumNum.Translator
                     case NumOperator.ADD:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -233,7 +234,7 @@ namespace NumNum.Translator
                     case NumOperator.SUBTRACT:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -246,7 +247,7 @@ namespace NumNum.Translator
                     case NumOperator.MULTIPLY:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -259,7 +260,7 @@ namespace NumNum.Translator
                     case NumOperator.DIVIDE:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -272,7 +273,7 @@ namespace NumNum.Translator
                     case NumOperator.REMAINDER:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -285,7 +286,7 @@ namespace NumNum.Translator
                     case NumOperator.GREATER_THAN:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -298,7 +299,7 @@ namespace NumNum.Translator
                     case NumOperator.LESS_THAN:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -311,7 +312,7 @@ namespace NumNum.Translator
                     case NumOperator.EQUAL:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -324,7 +325,7 @@ namespace NumNum.Translator
                     case NumOperator.NOT_EQUAL:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -337,7 +338,7 @@ namespace NumNum.Translator
                     case NumOperator.TEST:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -351,7 +352,7 @@ namespace NumNum.Translator
                     case NumOperator.GREATER_THAN_OR_EQUAL:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -364,7 +365,7 @@ namespace NumNum.Translator
                     case NumOperator.LESS_THAN_OR_EQUAL:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -377,7 +378,7 @@ namespace NumNum.Translator
                     case NumOperator.EQUAL_ZERO:
                         if (this.stack.Count < 1)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -389,7 +390,7 @@ namespace NumNum.Translator
                     case NumOperator.NOT_EQUAL_ZERO:
                         if (this.stack.Count < 1)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -401,7 +402,7 @@ namespace NumNum.Translator
                     case NumOperator.TEST_NOT:
                         if (this.stack.Count < 2)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -415,7 +416,7 @@ namespace NumNum.Translator
                     case NumOperator.IF_NOT_ZERO:
                         if (this.stack.Count < 1)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -425,12 +426,16 @@ namespace NumNum.Translator
                             {
                                 i = op.JumpPosition;
                             }
+                            else
+                            {
+                                this.controlStack.Push(op);
+                            }
                         }
                         break;
                     case NumOperator.IF_ZERO:
                         if (this.stack.Count < 1)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -440,14 +445,31 @@ namespace NumNum.Translator
                             {
                                 i = op.JumpPosition;
                             }
+                            else
+                            {
+                                this.controlStack.Push(op);
+                            }
                         }
                         break;
                     case NumOperator.END_IF:
+                        if (this.controlStack.Count < 1)
+                        {
+                            throw new ApplicationException($"insufficient in control stack: {op.Operator}");
+                        }
+                        else
+                        {
+                            InterpreterOperator control = this.controlStack.Pop();
+
+                            if (control.Operator != NumOperator.IF_NOT_ZERO && control.Operator != NumOperator.IF_ZERO)
+                            {
+                                throw new ApplicationException($"invalid control: {control.Operator} - {op.Operator}");
+                            }
+                        }
                         break;
                     case NumOperator.WHILE_NOT_ZERO:
                         if (this.stack.Count < 1)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
                         }
                         else
                         {
@@ -457,21 +479,58 @@ namespace NumNum.Translator
                             {
                                 i = op.JumpPosition;
                             }
+                            else
+                            {
+                                this.controlStack.Push(op);
+                            }
                         }
                         break;
                     case NumOperator.END_WHILE:
                         if (this.stack.Count < 1)
                         {
-                            throw new ApplicationException("insufficient in stack");
+                            throw new ApplicationException($"insufficient in stack: {op.Operator}");
+                        }
+                        else if (this.controlStack.Count < 1)
+                        {
+                            throw new ApplicationException($"insufficient in control stack: {op.Operator}");
                         }
                         else
                         {
+                            InterpreterOperator control = this.controlStack.Peek();
+                            if (control.Operator != NumOperator.WHILE_NOT_ZERO)
+                            {
+                                throw new ApplicationException($"invalid control: {control.Operator} - {op.Operator}");
+                            }
+
                             uint top = this.stack.Peek();
 
                             if (top != 0)
                             {
                                 i = op.JumpPosition;
                             }
+                            else
+                            {
+                                this.controlStack.Pop();
+                            }
+                        }
+                        break;
+                    case NumOperator.BREAK:
+                        if (this.controlStack.Count < 1)
+                        {
+                            throw new ApplicationException($"insufficient in control stack: {op.Operator}");
+                        }
+                        else
+                        {
+                            InterpreterOperator control = this.controlStack.Pop();
+                            while(control.Operator != NumOperator.WHILE_NOT_ZERO)
+                            {
+                                if(!this.controlStack.TryPop(out control))
+                                {
+                                    throw new ApplicationException($"insufficient in control stack: {op.Operator}");
+                                }
+                            }
+
+                            i = control.JumpPosition;
                         }
                         break;
                     case NumOperator.CONSTANT_8_BIT:
@@ -735,7 +794,7 @@ namespace NumNum.Translator
             }
             else
             {
-                throw new ApplicationException($"invalid operator: {NumOperator.END_IF}");
+                throw new ApplicationException($"invalid operator: {ifop.Operator} - {NumOperator.END_IF}");
             }
         }
 
@@ -771,8 +830,13 @@ namespace NumNum.Translator
             }
             else
             {
-                throw new ApplicationException($"invalid operator: {NumOperator.END_WHILE}");
+                throw new ApplicationException($"invalid operator: {whileop.Operator} - {NumOperator.END_WHILE}");
             }
+        }
+
+        protected override void Break()
+        {
+            AddToken(NumOperator.BREAK);
         }
 
         protected override void Constant8Bit(uint value)

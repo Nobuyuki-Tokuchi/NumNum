@@ -41,6 +41,7 @@ namespace NumNum.Translator
         END_IF = 82,
         WHILE_NOT_ZERO = 83,
         END_WHILE = 84,
+        BREAK = 850,
         CONSTANT_8_BIT = 90,
         CONSTANT_16_BIT = 91,
         CONSTANT_32_BIT = 92,

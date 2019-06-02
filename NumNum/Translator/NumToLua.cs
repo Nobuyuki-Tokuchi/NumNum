@@ -231,6 +231,11 @@ namespace NumNum.Translator
             this.writer.WriteLine("{0}end", this.indent);
         }
 
+        protected override void Break()
+        {
+            this.writer.WriteLine("{0}break", this.indent);
+        }
+
         protected override void Constant8Bit(uint value)
         {
             SetValue(value);

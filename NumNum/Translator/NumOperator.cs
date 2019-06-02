@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace NumNum.Translator
+{
+    enum NumOperator
+    {
+        COUNT = 0,
+        POP = 1,
+        COPY = 2,
+        SWAP = 3,
+        OVER = 4,
+        INCREMENT = 50,
+        DECREMENT = 51,
+        NOT = 52,
+        ROTATE_DOWN = 53,
+        ROTATE_UP = 54,
+        AND = 60,
+        OR = 61,
+        XOR = 62,
+        SHIFT_RIGHT = 63,
+        SHIFT_LEFT = 64,
+        ADD = 650,
+        SUBTRACT = 651,
+        MULTIPLY = 652,
+        DIVIDE = 653,
+        REMAINDER = 654,
+        GREATER_THAN = 70,
+        LESS_THAN = 71,
+        EQUAL = 72,
+        NOT_EQUAL = 73,
+        TEST = 74,
+        GREATER_THAN_OR_EQUAL = 750,
+        LESS_THAN_OR_EQUAL = 751,
+        EQUAL_ZERO = 752,
+        NOT_EQUAL_ZERO = 753,
+        TEST_NOT = 754,
+        IF_NOT_ZERO = 80,
+        IF_ZERO = 81,
+        END_IF = 82,
+        WHILE_NOT_ZERO = 83,
+        END_WHILE = 84,
+        CONSTANT_8_BIT = 90,
+        CONSTANT_16_BIT = 91,
+        CONSTANT_32_BIT = 92,
+        INPUT_CHARACTER = 93,
+        OUTPUT_CHARACTER = 94,
+        STORE_VARIABLE = 950,
+        COPY_VAIRABLE = 951,
+        LOAD_VARIABLE = 952,
+        INPUT_INTEGER = 953,
+        OUTPUT_INTEGER = 954,
+    }
+}
